@@ -1,0 +1,314 @@
+<div class="wrapper">
+	<div class="content">
+		<div class="first-screen header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+			<section class="welcome">
+				<div class="welcome__circle-first">
+					<img src="template/img/circle.png" class="circle-anim" alt="">
+					<div class="welcome__circle-second">
+						<img src="template/img/circle.png" class="circle-anim-second" alt="">
+					</div>
+				</div>
+				<div class="container">
+					<div class="welcome__title">
+						{{{translate("Land.ECONTENT")}}}
+					</div>
+					<div class="welcome__description">
+						{{{translate("Land.Experience the content revolution with EContent - your all-in-one platform for all your media and information needs. Our brand, EContent, is committed to providing a comprehensive solution for all your content requirements. Whether you're seeking entertainment, looking for the latest news and trends, or searching for information on various topics, EContent has got you covered. We also offer a range of services to help you discover, access, and engage with a wide variety of media, so you can stay informed and entertained. With EContent, you can easily access a diverse array of content and make informed decisions about what to watch, read, or explore. Plus, you can find all the necessary resources and media you need to stay engaged and entertained right here on our platform. Experience the future of content consumption with EContent today!")}}}
+					</div>
+				</div>
+			</section>
+		</div>
+		<section class="servicess">
+			<div class="container">
+				<div class="servicess__main-title global-title">
+					{{{translate("Land.CONTENT")}}} <span>{{{translate("Land.TYPES")}}}</span>
+				</div>
+				<div class="servicess__list">
+					<div class="servicess__wrap">
+						<div class="servicess__item">
+							<div class="servicess__img">
+								<img src="template/img/servicess/1.jpg" alt="">
+							</div>
+							<div class="servicess__title">
+								{{{translate("Land.Informational content")}}}
+							</div>
+						</div>
+					</div>
+					<div class="servicess__wrap">
+						<div class="servicess__item">
+							<div class="servicess__img">
+								<img src="template/img/servicess/2.jpg" alt="">
+							</div>
+							<div class="servicess__title">
+								{{{translate("Land.Selling content")}}}
+							</div>
+						</div>
+					</div>
+					<div class="servicess__wrap">
+						<div class="servicess__item">
+							<div class="servicess__img">
+								<img src="template/img/servicess/3.jpg" alt="">
+							</div>
+							<div class="servicess__title">
+								{{{translate("Land.Entertainment content")}}}
+							</div>
+						</div>
+					</div>
+					<div class="servicess__wrap">
+						<div class="servicess__item">
+							<div class="servicess__img">
+								<img src="template/img/servicess/4.jpg" alt="">
+							</div>
+							<div class="servicess__title">
+								{{{translate("Land.Engaging content")}}}
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</section>
+
+		<section class="services">
+			<div class="container">
+				<div class="services__main-title global-title">
+					{{{translate("Land.OUR")}}} <span>{{{translate("Land.SERVICES")}}}</span>
+				</div>
+				<div class="services__list">
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/1.jpg" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Translations of films")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/2.jpg" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Creating music")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/3.jpg" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Board Games")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/4.jpg" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Photo&video creation")}}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="about-us">
+			<div class="about-us__img">
+				<img src="template/img/about.jpg" alt="">
+			</div>
+			<div class="container">
+				<div class="about-us__title global-title">
+					{{{translate("Land.ABOUT")}}} <span>{{{translate("Land.US")}}}</span>
+				</div>
+				<div class="about-us__description">
+					<p>
+						{{{translate("Land.Meet the knowledgeable and dedicated team at EContent, a content platform that is transforming the way media and information are delivered. Our team is comprised of highly skilled content creators, technology experts, and media enthusiasts who work together to provide the highest quality content for our users.")}}}
+					</p>
+					<p>
+						{{{translate("Land.Each member of our team brings a unique perspective and passion to the world of media and information, and we are proud to have assembled a group of experts who are passionate about delivering engaging and informative content. Whether you're looking for entertainment, the latest news, or educational resources, our team is always ready to help.")}}}
+					</p>
+					<p>
+						{{{translate("Land.Discover the opportunity to learn more about each member of our team and see why EContent is the platform you can trust for the best media and information experiences.")}}}
+					</p>
+				</div>
+				<div class="about-us__btn">
+					<a href="/team" class="btn">
+						{{{translate("Land.MEET THE TEAM")}}}
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="l-product">
+			<div class="container">
+				<div class="l-estate__main-title global-title">
+					BUY <span>PRODUCTS</span>
+				</div>
+				<div class="product__list">
+					{% for product in products %}
+					<div class="product__wrap">
+						
+						<div class="product__item">
+							<div class="product__img">
+								<img src="{{{product.thumb}}}" alt="" />
+							</div>
+							<div class="product__title">
+								{{{product.name}}}
+							</div>
+							<pre class="product__description">{{{product.short}}}</pre>
+							<div class="product__btn-wrap">
+								<a href="/product/{{{product.url || product.id}}}" class="product__btn-heart product__btn-heart--first">
+									<span>OPEN</span>
+								</a>
+								<a href="" class="product__btn-heart product__btn-heart--second">
+									<img src="/template/img/icons/cart.svg" alt="" />
+								</a>
+								<a href="" class="product__btn-heart">
+									<img src="/template/img/icons/heart.svg" alt="" />
+								</a>
+							</div> 
+						</div>
+						
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+		<div class="photo-wrap">
+			<section class="l-product">
+				<div class="container">
+					<div class="l-estate__main-title global-title">
+						OUR <span>PORTFOLIO</span>
+					</div>
+					<div class="product__list">
+						{% for portfolio in portfolios %}
+						<div class="product__wrap">
+							<div class="product__item">
+								<div class="product__img">
+									<img src="{{{portfolio.thumb}}}" alt="" />
+								</div>
+								<div class="product__title">
+									{{{portfolio.name}}}
+								</div>
+								<pre class="product__description">{{{portfolio.short}}}</pre>
+								<div class="product__btn-wrap">
+									<a href="/portfolio/{{{portfolio.url || portfolio.id}}}" class="product__btn-heart product__btn-heart--first">
+										<span>OPEN</span>
+									</a>
+								</div> 
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</section>
+
+			<section class="l-article">
+				<div class="container">
+					<div class="global-title articles__land-title">
+						OUR <span>ARTICLES</span>
+					</div>
+					<div class="articles__list">
+						<a class="articles__wrap" href="/article/{{{article.id}}}">
+							<div class="articles__item">
+								<div class="articles__img">
+									<img src="/template/img/articles.png" alt="" />
+								</div>
+								<div class="articles__title">Articles title</div>
+								<div class="articles__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsam ut itaque voluptas libero explicabo fugit tempore odit, dolorum nostrum consequuntur iusto reiciendis et autem cum quidem eaque at error?</div>
+							</div>
+						</a>
+						<a class="articles__wrap" href="/article/{{{article.id}}}">
+							<div class="articles__item">
+								<div class="articles__img">
+									<img src="/template/img/articles.png" alt="" />
+								</div>
+								<div class="articles__title">Articles title</div>
+								<div class="articles__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsam ut itaque voluptas libero explicabo fugit tempore odit, dolorum nostrum consequuntur iusto reiciendis et autem cum quidem eaque at error?</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<section class="partners">
+			<div class="container">
+				<div class="partners__main-title global-title">
+					OUR <span>PARTNERS</span>
+				</div>
+				<div class="partners__list">
+					<div class="partners__wrap">
+						<div class="partners__item">
+							<div class="partners__img">
+								<img src="/template/img/articles.png" alt="">
+							</div>
+							<div class="partners__text">
+								<div class="partners__title">
+									Lorem ipsum title
+								</div>
+								<div class="partners__desription">
+									Description information partner
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="partners__wrap">
+						<div class="partners__item">
+							<div class="partners__img">
+								<img src="/template/img/articles.png" alt="">
+							</div>
+							<div class="partners__text">
+								<div class="partners__title">
+									Lorem ipsum title
+								</div>
+								<div class="partners__desription">
+									Description information partner
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--
+		<section class="download">
+			<div class="container">
+				<div class="download__wrap">
+					<div class="download__text">
+						<div class="download__title global-title">
+							{{{translate("Land.USE OUR")}}} <span>{{{translate("Land.APP")}}}</span>
+						</div>
+						<div class="download__description">
+							{{{translate("Land.If you're looking for a convenient, personalized, and fast way to access information and perform tasks related to real estate, then the Neryxomka mobile app is the way to go. Our app provides a seamless experience that is designed to make your life easier, no matter where you are. With the Neryxomka app, you can access the latest properties, get personalized recommendations, and perform common tasks like searching for properties or making payments with just a few taps. Plus, our app offers offline functionality, so you can access certain features and information even when you're not connected to the internet.")}}}
+
+							{{{translate("Land.The Neryxomka app also offers a faster and more responsive experience, with quicker load times and smoother transitions between screens. And, with better integration with your mobile device's features, such as the camera or GPS, you'll get a more immersive experience. And, with push notifications, you'll never miss a beat. Our app is also designed to be fun and engaging, with gamification elements such as rewards, achievements, and leaderboards.")}}}
+
+							{{{translate("Land.So why settle for a website when you can have all this and more at your fingertips with the Neryxomka mobile app? Download it now and experience the power of real estate, wherever you are!")}}}
+						</div>
+						<div class="download__btn">
+							<a href="" class="btn">
+								<img src="template/img/icons/load.svg" alt="">
+								<span>ANDROID</span>
+							</a>
+							<a href="" class="btn">
+								<img src="template/img/icons/load.svg" alt="">
+								<span>IOS</span>
+							</a>
+						</div>
+					</div>
+					<div class="download__img">
+						<img src="/template/img/load.png" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+		-->
+	</div>
+	{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>
